@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  node-evan:
+    container_name: "node-evan"
+    image: 420361828844.dkr.ecr.ap-southeast-1.amazonaws.com/xendit/iss/evan-node:latest
+    deploy:
+      replicas: 1
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+    - "3000:3000"
